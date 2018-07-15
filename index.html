@@ -108,6 +108,62 @@
 		</div>
 
 		<main class="content">
+			
+			
+			<section class="panel">
+				<h2>Recently Added</h2>
+				<div class="recentslider">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><a href="single.html"><img src="images/9.jpg"><h3 class="hometitle">Space Betwen Us</h3></a></div>
+<script>
+if (window.XMLHttpRequest)
+{
+	// Objeto para IE7+, Firefox, Chrome, Opera, Safari
+	xmlhttp=new XMLHttpRequest();
+}else{
+	// Objeto para IE6, IE5
+	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+}
+ 
+// Abrimos el archivo que esta alojado en el servidor cd_catalog.xml
+xmlhttp.open("GET","xforos.xml",false);
+xmlhttp.send();
+ 
+// Obtenemos un objeto XMLDocument con el contenido del archivo xml del servidor
+xmlDoc=xmlhttp.responseXML;
+ 
+// Obtenemos todos los nodos denominados foro del archivo xml
+var foros=xmlDoc.getElementsByTagName("xxx3");
+ 
+// Hacemos un bucle por todos los elementos foro
+for(var i=0;i<foros.length;i++)
+{
+	// Del elemento foro, obtenemos del primer elemento denominado "titulo"
+	// el valor del primer elemento interno
+	titulo=foros[i].getElementsByTagName("titulo")[0].childNodes[0].nodeValue
+	detalle=foros[i].getElementsByTagName("detalle")[0].childNodes[0].nodeValue
+	informacion=foros[i].getElementsByTagName("informacion")[0].childNodes[0].nodeValue
+	links=foros[i].getElementsByTagName("links")[0].childNodes[0].nodeValue
+ 
+	document.write("<div class='swiper-slide'>");
+		document.write("<a href="+links+">");
+		document.write("<img src='images/"+detalle+".jpg'>");
+		document.write("<h3 class='hometitle'>"+titulo+"</h3>");
+		document.write("</a>");
+	document.write("</div>");
+}
+</script>
+							
+							<div class="swiper-slide"><a href="mostwatched.html"><img src="img/others.png"></a></div>
+						</div>
+						<div class="nextdirection recent-next"><img src="img/right-arrow.svg"> </div>
+						<div class="leftdirection recent-prev"><img src="img/left-arrow.svg"> </div>
+					</div>
+				</div>
+			</section>
+			
+			
 			<section class="panel">
 				<h2>Recently Added</h2>
 				<div class="recentslider">
