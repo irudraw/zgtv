@@ -1,21 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <foros>
-<xxx3>
-	<teen>
+<video>
+<pelicula>
+	<latino>
 		<titulo>Space Betwen Us</titulo>
 		<detalle>9</detalle>
 		<informacion>Anna wells WebCam</informacion>
 		<links>single.html</links>
-	</teen>
-</xxx3>
-<xxx3>
-	<teen>
+	</latino>
+</pelicula>
+</video>
+<video>
+<pelicula>
+	<latino>
 		<titulo>Space Betwen Us</titulo>
 		<detalle>8</detalle>
 		<informacion>Anna wells WebCam</informacion>
 		<links>single.html</links>
-	</teen>
-</xxx3>
+	</latino>
+</pelicula>
+</video>
+
+<video>
+<series>
+	<latino>
+		<titulo>Space Betwen Us</titulo>
+		<detalle>9</detalle>
+		<informacion>Anna wells WebCam</informacion>
+		<links>single.html</links>
+	</latino>
+</series>
+</video>
+<video>
+<series>
+	<latino>
+		<titulo>Space Betwen Us</titulo>
+		<detalle>9</detalle>
+		<informacion>Anna wells WebCam</informacion>
+		<links>single.html</links>
+	</latino>
+</series>
+</video>
+
+<video>
+<anime>
+	<latino>
+		<titulo>Space Betwen Us</titulo>
+		<detalle>9</detalle>
+		<informacion>Anna wells WebCam</informacion>
+		<links>single.html</links>
+	</latino>
+</anime>
+</video>
 
 	
 </foros>
