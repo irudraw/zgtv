@@ -80,7 +80,7 @@ function myFunction(arr) {
     var i;
     for(i = 0; i<arr.length; i++) {
        // out += '<li><a  href="zgtv?a=' + arr[i].desc + '" target="_blank" ><h2>' + arr[i].titulo + '</h2><p>' + arr[i].subt + '</p><p class="ui-li-aside">' + arr[i].display + '</p></a></li>';
-    out += '<div class="mov"><a href="../../single?a=' + arr[i].desc + '" target="_blank"><img src="poster.jpg"><h2 class="movietitle">' + arr[i].titulo + '</h2></a></div>';
+    out += '<div class="mov"><a href="../../single?a=' + arr[i].desc + '" target="_blank"><img src="poster.jpg"><h2 class="movietitle">' + arr[i].titulo + ' ' + arr[i].display + '</h2></a></div>';
     }
     document.getElementById("id01").innerHTML = out;
 }
@@ -88,66 +88,7 @@ function myFunction(arr) {
 <script src="js.js"></script>
 					
 					
-					<div class="mov">
-						<a href="single.html">
-							<img src="images/9.jpg">
-							<h2 class="movietitle">The Space Between Us</h2>
-						</a>
-					</div>
-					<div class="mov">
-						<a href="single.html">
-							<img src="images/7.jpg">
-							<h2 class="movietitle">Transformers</h2>
-						</a>
-					</div>
-					<div class="mov">
-						<a href="single.html">
-							<img src="images/8.jpg">
-							<h2 class="movietitle">XXX</h2>
-						</a>
-					</div>
-					<div class="mov">
-						<a href="single.html">
-							<img src="images/6.jpg">
-							<h2 class="movietitle">Fifty Shades Darker</h2>
-						</a>
-					</div>
-					<div class="mov">
-						<a href="single.html">
-							<img src="images/9.jpg">
-							<h2 class="movietitle">The Space Between Us</h2>
-						</a>
-					</div>
-					<div class="mov">
-						<a href="single.html">
-							<img src="images/9.jpg">
-							<h2 class="movietitle">The Space Between Us</h2>
-						</a>
-					</div>
-					<div class="mov">
-						<a href="single.html">
-							<img src="images/7.jpg">
-							<h2 class="movietitle">Transformers</h2>
-						</a>
-					</div>
-					<div class="mov">
-						<a href="single.html">
-							<img src="images/8.jpg">
-							<h2 class="movietitle">XXX</h2>
-						</a>
-					</div>
-					<div class="mov">
-						<a href="single.html">
-							<img src="images/6.jpg">
-							<h2 class="movietitle">Fifty Shades Darker</h2>
-						</a>
-					</div>
-					<div class="mov">
-						<a href="single.html">
-							<img src="images/9.jpg">
-							<h2 class="movietitle">The Space Between Us</h2>
-						</a>
-					</div>
+					
 				</div>
 				<!--
 				<nav class="pagination">
