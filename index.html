@@ -113,7 +113,7 @@
 			
 			
 			<section class="panel">
-				<h2>Recently Added</h2>
+				<h2>Peliculas</h2>
 				<div class="recentslider">
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
@@ -167,27 +167,50 @@ for(var i=0;i<foros.length;i++)
 			
 			
 			<section class="panel">
-				<h2>Recently Added</h2>
+				<h2>Series</h2>
 				<div class="recentslider">
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide"><a href="single.html"><img src="images/9.jpg"><h3 class="hometitle">Space Betwen Us</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/2.jpg"><h3 class="hometitle">John Wick</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/3.jpg"><h3 class="hometitle">Spider-Man Homecoming</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/4.jpg"><h3 class="hometitle">Beauty and the Beast</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/5.jpg"><h3 class="hometitle">Pirates of the Caribbean: Dead Men Tell No Tales</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/6.jpg"><h3 class="hometitle">Fifty Shades Darker</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/7.jpg"><h3 class="hometitle">Transformers: The Last Knight</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/8.jpg"><h3 class="hometitle">xXx: Return of Xander Cage</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/9.jpg"><h3 class="hometitle">Space Betwen Us</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/2.jpg"><h3 class="hometitle">John Wick</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/3.jpg"><h3 class="hometitle">Spider-Man Homecoming</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/4.jpg"><h3 class="hometitle">Beauty and the Beast</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/5.jpg"><h3 class="hometitle">Pirates of the Caribbean: Dead Men Tell No Tales</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/6.jpg"><h3 class="hometitle">Fifty Shades Darker</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/7.jpg"><h3 class="hometitle">Transformers: The Last Knight</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/8.jpg"><h3 class="hometitle">xXx: Return of Xander Cage</h3></a></div>
-
+						
+<script>
+if (window.XMLHttpRequest)
+{
+	// Objeto para IE7+, Firefox, Chrome, Opera, Safari
+	xmlhttp=new XMLHttpRequest();
+}else{
+	// Objeto para IE6, IE5
+	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+}
+ 
+// Abrimos el archivo que esta alojado en el servidor cd_catalog.xml
+xmlhttp.open("GET","xforos.xml?v="+Math.floor(Math.random() * 100) + 1+"1",false);
+xmlhttp.send();
+ 
+// Obtenemos un objeto XMLDocument con el contenido del archivo xml del servidor
+xmlDoc=xmlhttp.responseXML;
+ 
+// Obtenemos todos los nodos denominados foro del archivo xml
+var foros=xmlDoc.getElementsByTagName("series");
+ 
+// Hacemos un bucle por todos los elementos foro
+for(var i=0;i<foros.length;i++)
+{
+	// Del elemento foro, obtenemos del primer elemento denominado "titulo"
+	// el valor del primer elemento interno
+	titulo=foros[i].getElementsByTagName("titulo")[0].childNodes[0].nodeValue
+	detalle=foros[i].getElementsByTagName("detalle")[0].childNodes[0].nodeValue
+	informacion=foros[i].getElementsByTagName("informacion")[0].childNodes[0].nodeValue
+	links=foros[i].getElementsByTagName("links")[0].childNodes[0].nodeValue
+ 
+	document.write("<div class='swiper-slide'>");
+		document.write("<a href="+links+">");
+		document.write("<img src='images/"+detalle+".jpg'>");
+		document.write("<h3 class='hometitle'>"+titulo+"</h3>");
+		document.write("</a>");
+	document.write("</div>");
+}
+</script>
+							
 							<div class="swiper-slide"><a href="mostwatched.html"><img src="img/others.png"></a></div>
 						</div>
 						<div class="nextdirection recent-next"><img src="img/right-arrow.svg"> </div>
@@ -197,66 +220,59 @@ for(var i=0;i<foros.length;i++)
 			</section>
 
 			<section class="panel">
-				<h2>Most Watched</h2>
-				<div class="mostslider">
+				<h2>Peliculas</h2>
+				<div class="recentslider">
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide"><a href="single.html"><img src="images/9.jpg"><h3 class="hometitle">Space Betwen Us</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/2.jpg"><h3 class="hometitle">John Wick</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/3.jpg"><h3 class="hometitle">Spider-Man Homecoming</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/4.jpg"><h3 class="hometitle">Beauty and the Beast</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/5.jpg"><h3 class="hometitle">Pirates of the Caribbean: Dead Men Tell No Tales</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/6.jpg"><h3 class="hometitle">Fifty Shades Darker</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/7.jpg"><h3 class="hometitle">Transformers: The Last Knight</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/8.jpg"><h3 class="hometitle">xXx: Return of Xander Cage</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/9.jpg"><h3 class="hometitle">Space Betwen Us</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/2.jpg"><h3 class="hometitle">John Wick</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/3.jpg"><h3 class="hometitle">Spider-Man Homecoming</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/4.jpg"><h3 class="hometitle">Beauty and the Beast</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/5.jpg"><h3 class="hometitle">Pirates of the Caribbean: Dead Men Tell No Tales</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/6.jpg"><h3 class="hometitle">Fifty Shades Darker</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/7.jpg"><h3 class="hometitle">Transformers: The Last Knight</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/8.jpg"><h3 class="hometitle">xXx: Return of Xander Cage</h3></a></div>
-
+						
+<script>
+if (window.XMLHttpRequest)
+{
+	// Objeto para IE7+, Firefox, Chrome, Opera, Safari
+	xmlhttp=new XMLHttpRequest();
+}else{
+	// Objeto para IE6, IE5
+	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+}
+ 
+// Abrimos el archivo que esta alojado en el servidor cd_catalog.xml
+xmlhttp.open("GET","xforos.xml?v="+Math.floor(Math.random() * 100) + 1+"1",false);
+xmlhttp.send();
+ 
+// Obtenemos un objeto XMLDocument con el contenido del archivo xml del servidor
+xmlDoc=xmlhttp.responseXML;
+ 
+// Obtenemos todos los nodos denominados foro del archivo xml
+var foros=xmlDoc.getElementsByTagName("anime");
+ 
+// Hacemos un bucle por todos los elementos foro
+for(var i=0;i<foros.length;i++)
+{
+	// Del elemento foro, obtenemos del primer elemento denominado "titulo"
+	// el valor del primer elemento interno
+	titulo=foros[i].getElementsByTagName("titulo")[0].childNodes[0].nodeValue
+	detalle=foros[i].getElementsByTagName("detalle")[0].childNodes[0].nodeValue
+	informacion=foros[i].getElementsByTagName("informacion")[0].childNodes[0].nodeValue
+	links=foros[i].getElementsByTagName("links")[0].childNodes[0].nodeValue
+ 
+	document.write("<div class='swiper-slide'>");
+		document.write("<a href="+links+">");
+		document.write("<img src='images/"+detalle+".jpg'>");
+		document.write("<h3 class='hometitle'>"+titulo+"</h3>");
+		document.write("</a>");
+	document.write("</div>");
+}
+</script>
+							
 							<div class="swiper-slide"><a href="mostwatched.html"><img src="img/others.png"></a></div>
 						</div>
-						<div class="nextdirection most-next"><img src="img/right-arrow.svg"> </div>
-						<div class="leftdirection most-prev"><img src="img/left-arrow.svg"> </div>
-						<!-- Add Pagination -->
+						<div class="nextdirection recent-next"><img src="img/right-arrow.svg"> </div>
+						<div class="leftdirection recent-prev"><img src="img/left-arrow.svg"> </div>
 					</div>
 				</div>
 			</section>
 
-			<section class="panel">
-				<h2>Top Rated</h2>
-				<div class="topslider">
-					<div class="swiper-container">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide"><a href="single.html"><img src="images/9.jpg"><h3 class="hometitle">Space Betwen Us</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/2.jpg"><h3 class="hometitle">John Wick</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/3.jpg"><h3 class="hometitle">Spider-Man Homecoming</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/4.jpg"><h3 class="hometitle">Beauty and the Beast</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/5.jpg"><h3 class="hometitle">Pirates of the Caribbean: Dead Men Tell No Tales</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/6.jpg"><h3 class="hometitle">Fifty Shades Darker</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/7.jpg"><h3 class="hometitle">Transformers: The Last Knight</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/8.jpg"><h3 class="hometitle">xXx: Return of Xander Cage</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/9.jpg"><h3 class="hometitle">Space Betwen Us</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/2.jpg"><h3 class="hometitle">John Wick</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/3.jpg"><h3 class="hometitle">Spider-Man Homecoming</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/4.jpg"><h3 class="hometitle">Beauty and the Beast</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/5.jpg"><h3 class="hometitle">Pirates of the Caribbean: Dead Men Tell No Tales</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/6.jpg"><h3 class="hometitle">Fifty Shades Darker</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/7.jpg"><h3 class="hometitle">Transformers: The Last Knight</h3></a></div>
-							<div class="swiper-slide"><a href="single.html"><img src="images/8.jpg"><h3 class="hometitle">xXx: Return of Xander Cage</h3></a></div>
-
-							<div class="swiper-slide"><a href="mostwatched.html"><img src="img/others.png"></a></div>
-						</div>
-						<div class="nextdirection top-next"><img src="img/right-arrow.svg"> </div>
-						<div class="leftdirection top-prev"><img src="img/left-arrow.svg"> </div>
-						<!-- Add Pagination -->
-					</div>
-				</div>
-			</section>
+			
 
 			
 		</main>
