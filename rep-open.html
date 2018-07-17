@@ -25,6 +25,7 @@
 
 		<header class="header">
 			<figure class="logo"><a href="index.html"><img src="img/logo.png" alt="Logo"></figure></a>
+			<!--
 			<nav class="menu">
 				<ul>
 					<li><a href="index.html">Home</a></li>
@@ -65,6 +66,8 @@
 			</form>
 
 			<div class="toggle"><img src="img/menu.svg"></div>
+-->
+
 		</header>
 
 		<main class="content">
@@ -73,7 +76,54 @@
 				<section class="trailer">
 					<h3>Trailer</h3>
 					<div class="trailer_frame">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/x73-573aWfs" frameborder="0" allowfullscreen></iframe>
+						<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/x73-573aWfs" frameborder="0" allowfullscreen></iframe> -->
+					<script>
+    /**
+     * Funcion que captura las variables pasados por GET
+     * https://irudraw.github.io/zgtv/id.html?id=zgtv&pos=3
+     * Devuelve un array de clave=>valor
+     */
+    function getGET()
+    {
+        // capturamos la url
+        var loc = document.location.href;
+        // si existe el interrogante
+        if(loc.indexOf('?')>0)
+        {
+            // cogemos la parte de la url que hay despues del interrogante
+            var getString = loc.split('?')[1];
+            // obtenemos un array con cada clave=valor
+            var GET = getString.split('&');
+            var get = {};
+ 
+            // recorremos todo el array de valores
+            for(var i = 0, l = GET.length; i < l; i++){
+                var tmp = GET[i].split('=');
+                get[tmp[0]] = unescape(decodeURI(tmp[1]));
+            }
+            return get;
+        }
+    }
+ 
+    window.onload = function()
+    {
+        // Cogemos los valores pasados por get
+        var valores=getGET();
+        if(valores)
+        {
+            // hacemos un bucle para pasar por cada indice del array de valores
+            for(var index in valores)
+            {
+                //document.write("<br>clave: "+index+" - valor: "+valores[index]);
+                //document.write("<br>"+valores[index]);
+                document.write("<iframe width='560' height='315' src='https://www.youtube.com/embed/"+valores[index]+"' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>");
+                }
+        }else{
+            // no se ha recibido ningun parametro por GET
+            document.write("<br>No se ha recibido ningún parámetro");
+        }
+    }
+    </script>
 					</div>
 				</section>
 
