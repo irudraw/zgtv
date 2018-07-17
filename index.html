@@ -129,7 +129,7 @@ if (window.XMLHttpRequest)
 }
  
 // Abrimos el archivo que esta alojado en el servidor cd_catalog.xml
-xmlhttp.open("GET","xforos.xml",false);
+xmlhttp.open("GET","xforos.xml?v=f.getSeconds()",false);
 xmlhttp.send();
  
 // Obtenemos un objeto XMLDocument con el contenido del archivo xml del servidor
