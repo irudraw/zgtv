@@ -182,14 +182,14 @@ if (window.XMLHttpRequest)
 }
  
 // Abrimos el archivo que esta alojado en el servidor cd_catalog.xml
-xmlhttp.open("GET","xforos.xml?v="+Math.floor(Math.random() * 100) + 1+"1",false);
+xmlhttp.open("GET","xml/series.xml?v="+Math.floor(Math.random() * 100) + 1+"1",false);
 xmlhttp.send();
  
 // Obtenemos un objeto XMLDocument con el contenido del archivo xml del servidor
 xmlDoc=xmlhttp.responseXML;
  
 // Obtenemos todos los nodos denominados foro del archivo xml
-var foros=xmlDoc.getElementsByTagName("series");
+var foros=xmlDoc.getElementsByTagName("video");
  
 // Hacemos un bucle por todos los elementos foro
 for(var i=0;i<foros.length;i++)
@@ -197,13 +197,12 @@ for(var i=0;i<foros.length;i++)
 	// Del elemento foro, obtenemos del primer elemento denominado "titulo"
 	// el valor del primer elemento interno
 	titulo=foros[i].getElementsByTagName("titulo")[0].childNodes[0].nodeValue
-	detalle=foros[i].getElementsByTagName("detalle")[0].childNodes[0].nodeValue
-	informacion=foros[i].getElementsByTagName("informacion")[0].childNodes[0].nodeValue
+	poster=foros[i].getElementsByTagName("poster")[0].childNodes[0].nodeValue
 	links=foros[i].getElementsByTagName("links")[0].childNodes[0].nodeValue
  
 	document.write("<div class='swiper-slide'>");
 		document.write("<a href="+links+">");
-		document.write("<img src='images/"+detalle+".jpg'>");
+		document.write("<img src='series/"+poster+".jpg'>");
 		document.write("<h3 class='hometitle'>"+titulo+"</h3>");
 		document.write("</a>");
 	document.write("</div>");
